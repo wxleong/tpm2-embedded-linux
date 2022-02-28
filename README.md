@@ -1,8 +1,18 @@
 # Introduction
 
-OPTIGA™ TPM 2.0 on embedded systems.
+Enable OPTIGA™ TPM 2.0 on embedded Linux.
+
+System overview:
+TPM <-> Linux kernel driver (/dev/tpmrm0) <-> tpm2-tss + Mbed TLS (for ESAPI) <-> Application
 
 # Table of Contents
+
+- **[Prerequisites](#prerequisites)**
+- **[Mbed TLS Library](#mbed-tls-library)**
+- **[Decouple tpm2-tss Library](#decouple-tpm2-tss-library)**
+- **[Sample Application](#sample-application)**
+- **[References](#references)**
+- **[License](#license)**
 
 # Prerequisites
 
@@ -23,7 +33,7 @@ $ cd library/
 $ make -j$(nproc)
 ```
 
-# Decouple Tpm2-tss Library
+# Decouple tpm2-tss Library
 
 ```
 $ git clone https://github.com/tpm2-software/tpm2-tss ~/tpm2-tss
@@ -47,6 +57,11 @@ $ cd ~/tpm2-mbedtls/code
 $ make -j$(nproc)
 $ ./main
 ```
+
+# References
+
+<a id="1">[1] https://www.infineon.com/cms/en/product/evaluation-boards/iridium9670-tpm2.0-linux/</a><br>
+<a id="2">[2] https://github.com/wxleong/tpm2-rpi4</a><br>
 
 # License
 
