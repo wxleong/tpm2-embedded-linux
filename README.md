@@ -40,8 +40,8 @@ $ git clone https://github.com/tpm2-software/tpm2-tss ~/tpm2-tss
 $ cd ~/tpm2-tss
 $ git checkout 3.2.0
 
-$ git clone https://github.com/wxleong/tpm2-embedded ~/tpm2-embedded
-$ cp -r ~/tpm2-embedded/tpm2-tss/cmake ~/tpm2-tss/
+$ git clone https://github.com/wxleong/tpm2-embedded-linux ~/tpm2-embedded-linux
+$ cp -r ~/tpm2-embedded-linux/tpm2-tss/cmake ~/tpm2-tss/
 $ cd ~/tpm2-tss/cmake
 $ rm -rf CMakeFiles
 $ cmake -j$(nproc) .
@@ -52,7 +52,7 @@ $ cmake --build . -j$(nproc)
 
 ```
 $ git clone https://github.com/wxleong/tpm2-mbedtls ~/tpm2-mbedtls
-$ cp -f ~/tpm2-embedded/tpm2-mbedtls/Makefile ~/tpm2-mbedtls/code/
+$ cp -f ~/tpm2-embedded-linux/tpm2-mbedtls/Makefile ~/tpm2-mbedtls/code/
 $ cd ~/tpm2-mbedtls/code 
 $ make -j$(nproc)
 $ ./main
