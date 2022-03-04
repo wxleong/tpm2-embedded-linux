@@ -22,6 +22,10 @@ TPM <-> Linux kernel driver (/dev/tpmrm0) <-> tpm2-tss + Mbed TLS (for ESAPI) <-
     ```
     $ sudo apt install cmake
     ```
+- Grant access to TPM device node:
+    ```
+    $ sudo chmod a+rw /dev/tpmrm0
+    ```
 
 # Mbed TLS Library
 
